@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", 
+function () {
     let step = 1;
     let resultElement = document.getElementById("result");
 
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         callback(result);
       }, 1000);
     }
-
+    
     if (step === 1) {
       fetchData(function (data) {
         resultElement.innerText = "Step 1: Data fetched.";
