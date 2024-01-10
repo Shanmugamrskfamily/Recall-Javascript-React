@@ -14,7 +14,7 @@ prog.onload = () => {
 
       for (let i = 0; i < obj.length; i++) {
         const countryName = obj[i].name.official;
-        
+        const populationHigh=obj[i].population;
         if (obj[i].population > 10000000) {
           populasCountries.push(countryName);
         }
@@ -22,14 +22,14 @@ prog.onload = () => {
         if (!maxPopulationCountry || obj[i].population > maxPopulationCountry.population) {
           maxPopulationCountry = obj[i];
         }
-
+        const poulationHasHight= populationHigh>=10000000;
         const isSpecialCountry = countryName === 'Republic of India' || countryName === 'Islamic Republic of Pakistan';
         htmlResult += `
-        <div style="border: 1px solid #ddd; padding: 10px; margin: 10px; width: 300px; background: ${isSpecialCountry ? 'red' : 'gray'}; color: ${isSpecialCountry ? 'white' : 'black'};">
+        <div style="border: 1px solid #ddd; padding: 10px; margin: 10px; width: 300px; background: ${isSpecialCountry ? 'yellow' : 'gray'}; color: ${isSpecialCountry ? 'red' : 'black'};">
           <b>Country Name:</b> ${countryName}</br>
           <b>Region:</b> ${obj[i].region}</br>
           <b>Sub-Region:</b> ${obj[i].subregion}</br>
-          <b>Population:</b> ${obj[i].population}</br>
+          <span style="background: ${poulationHasHight ? 'red' : 'gray'}; color: ${poulationHasHight ? 'white' : 'black'};"><b>Population:</b> ${obj[i].population}</span></br>
           <b>Flag:</b><br>
           <div style="text-align: center;">
             <img src="${obj[i].flags.png}" alt="Flag" style="width: 200px; height: 100px; object-fit: contain;">
@@ -37,8 +37,8 @@ prog.onload = () => {
         </div>`;
       }
       
-      let populationResult = `<div><b>Population Greater than 10,000,000:</b> ${populasCountries.join(', ')}</div>`;
-      
+      let populationResult = `<div><b>Population Greater than 1 Crore(1,00,00,000):</b> ${populasCountries.join(', ')}</div>`;
+
       if (maxPopulationCountry) {
         populationResult += `<div style="background: yellow; padding: 5px; margin-top: 10px;"><b>Most Populous Country:</b> ${maxPopulationCountry.name.official} (Population: ${maxPopulationCountry.population})</div>`;
       }
