@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Numbers</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      #root {
+        margin: auto;
+        width: 300px;
+      }
+
+      input {
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      h1 {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <input
+        id="start"
+        type="number"
+        placeholder="Enter Start Range" /><br /><br />
+      <input id="end" type="number" placeholder="Enter End Range" /><br /><br />
+      <button onclick="countPrimesInRange()">Click to Count</button><br /><br />
+      <h1 id="answer"></h1>
+    </div>
+    <script src="./primeNumberCount.js"></script>
+  </body>
+</html>
