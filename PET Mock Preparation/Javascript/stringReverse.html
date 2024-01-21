@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sting Reverse</title>
+    <title>String Reverse</title>
   </head>
   <body>
     <h1 style="text-align: center">String Reverse</h1>
@@ -11,9 +11,9 @@
     <script>
       let data = document.getElementById("root");
       const str = "Hello World!";
-      const reverseStr = (str) => str.split("").reverse().join("");
+      const reverseStr = (str) => str.split(" ").reverse().join(" ");
       const reversedString = reverseStr(str);
-      data.innerHTML = `The Original String: ${str}</br>The Reversed String: ${reversedString}`;
+      data.innerHTML = `The Reversed String: ${reversedString}<br>The Original String: ${str}`;
     </script>
   </body>
 </html>

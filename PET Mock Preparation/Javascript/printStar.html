@@ -7,14 +7,18 @@
   </head>
   <body>
     <h1 style="text-align: center; text-decoration: underline">Print '*'</h1>
-    <div style="text-align: center" id="root"></div>
+    <div style="text-align: center; font-size: 30px" id="root"></div>
     <script>
       const data = document.getElementById("root");
       const str = "*";
       const value = 5;
       const printStar = (number, str) => {
-        for (let i = 0; i <= number; i++) {
-          data.innerText += `\n${str.repeat(i)}`;
+        for (let i = number; i > 0; i--) {
+          let line = "";
+          for (let j = 0; j < i; j++) {
+            line += ` ${str}`;
+          }
+          data.innerText += `\n${line}`;
         }
       };
       const printTheValue = printStar(value, str);
