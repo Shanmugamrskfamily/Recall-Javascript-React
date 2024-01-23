@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 function Button_RFCE_UseRef() {
     const countRef = useRef(0);
@@ -15,12 +15,6 @@ function Button_RFCE_UseRef() {
         setCount(countRef.current);
         console.log(`UseRef: ${countRef.current}`);
     }
-
-    useEffect(() => {
-        setCount(countRef.current); 
-        console.log(`useEffect: ${countRef.current}`);
-        console.log(`UseRef: ${countRef.current}`);
-    }, [countRef.current]);
 
     return (
         <div>

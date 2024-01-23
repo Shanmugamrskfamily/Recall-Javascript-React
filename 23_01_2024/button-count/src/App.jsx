@@ -7,9 +7,9 @@ function App() {
 
 
   return (
-<div>
+<div className="centerThis">
   <h1>React Button Functionality</h1>
-  <h3>Using UseState() Method</h3><br/>
+  <h3>Using UseState() Method</h3>
 <Button_RFCE/><br/>
 <h3>Using UseRef() Method</h3>
 <Button_RFCE_UseRef/><br/>
