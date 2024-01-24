@@ -1,15 +1,13 @@
-import React from 'react'
-import GrandChild from './GrandChild'
+import React from 'react';
+import GrandChild from './GrandChild';
 
-function Child({onGrandchildMessage}) {
-
+function Child(props) {
   return (
     <div>
-        <h2>Child</h2>
-        <GrandChild onGrandchildMessage={onGrandchildMessage}/>
+      <h2>Child</h2>
+      <GrandChild names={props.parrent} grandChildMsg={props.grandChildMsg} />
     </div>
-    
-  )
+  );
 }
 
-export default Child
+export default Child;

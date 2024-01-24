@@ -1,18 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-function GrandChild({onGrandchildMessage}) {
-    const [message,setMessage]=useState('');
-    const handleSendMsg=()=>{
-        onGrandchildMessage(message);
+function GrandChild(props) {
+    const [message, setMessage] = useState('');
+
+    const handleSendMsg = () => {
+            props.grandChildMsg(message);
+            console.log(props.grandChildMsg);
     }
 
-  return (
-    <div>
-        <h3>GrandChild</h3>
-        <input type="text" placeholder='Type Your Message' value={message} onChange={(e)=>setMessage(e.target.value)} />
-        <button onClick={handleSendMsg}>Sent Message</button>
-    </div>
-  )
+    return (
+        <div>
+            <h3>GrandChild</h3>
+            <input type="text" placeholder='Type Your Message' value={message} onChange={(e) => setMessage(e.target.value)} />
+            <button onClick={handleSendMsg}>Send to Parent</button>
+            <p>Message From Parent: {props.names}</p>
+        </div>
+    );
 }
 
-export default GrandChild
+export default GrandChild;
