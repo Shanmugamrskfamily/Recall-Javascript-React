@@ -9,7 +9,7 @@ function ProductStatus() {
         if(data.toLocaleLowerCase()==='mobile'){
         setStatus(data);
         setAge(28);
-        setMobile('7845991892');
+        setMobile('7845');
         setName('SHANMUGAM');
         }
         else{
