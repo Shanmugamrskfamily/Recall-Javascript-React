@@ -20,7 +20,7 @@ function ProductStatus() {
     return (
         <div>
             <input type="text" placeholder='Type Product Name Here' value={data} onChange={(e) => setData(e.target.value)} />
-            <button onClick={handleApplyStatus}>Send Data</button>
+            <button style={{margin:'20px'}} onClick={handleApplyStatus}>Send Data</button>
         </div>
     )
 }

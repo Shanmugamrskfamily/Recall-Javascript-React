@@ -12,8 +12,8 @@ function App() {
       <ProductProvider>
         <div style={{display:'flex',flexDirection:'column',alignItems:'center',alignContent:'center'}}>
           <h1>Product Status Changing APP</h1>
-          <Product/>
           <ProductStatus/>
+          <Product/>
         </div>
       </ProductProvider>
       </div>
