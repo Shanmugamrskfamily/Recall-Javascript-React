@@ -11,7 +11,7 @@ function ChildElement(props) {
                 <li key={index}>{name}</li>
             ))}
         </ol>
-        <GrandChildElement names={props.names} />
+        <GrandChildElement names={props.names} grandChild={props.grandChild} />
     </div>
   )
 }

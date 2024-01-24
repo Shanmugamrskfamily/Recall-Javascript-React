@@ -11,7 +11,7 @@ function GrandChild(props) {
     return (
         <div>
             <h3>GrandChild</h3>
-            <input type="text" placeholder='Type Your Message' value={message} onChange={(e) => setMessage(e.target.value)} />
+            <input type="text" style={{margin:"10px"}} placeholder='Type Your Message' value={message} onChange={(e) => setMessage(e.target.value)} />
             <button onClick={handleSendMsg}>Send to Parent</button>
             <p>Message From Parent: {props.names}</p>
         </div>
