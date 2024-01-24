@@ -1,12 +1,14 @@
 import React from 'react'
-import Grandchild from './GrandChild'
+import GrandChild from './GrandChild'
 
 function Child({onGrandchildMessage}) {
+
   return (
     <div>
-        <h2>Child</h2><br />
-        <Grandchild onGrandchildMessage={onGrandchildMessage}/>
+        <h2>Child</h2>
+        <GrandChild onGrandchildMessage={onGrandchildMessage}/>
     </div>
+    
   )
 }
 
