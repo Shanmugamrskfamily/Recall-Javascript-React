@@ -9,11 +9,12 @@ function App() {
   return (
 <div className="centerThis">
   <h1>React Button Functionality</h1>
-  <h3>Using UseState() Method</h3>
+  <div className="shape">Hello</div>
+  <h3>Using <span style={{color:"blue"}}>UseState()</span> Method</h3>
 <Button_RFCE/><br/>
-<h3>Using UseRef() Method</h3>
+<h3>Using <span style={{color:"blue"}}>UseRef()</span> Method</h3>
 <Button_RFCE_UseRef/><br/>
-<h3>Using React Class Component</h3>
+<h3>Using React <span style={{color:"blue"}}>Class Component</span></h3>
 <Button_ClassComponent/>
 </div>
   )
