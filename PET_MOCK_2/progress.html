@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Progress Bar</h1>
+    <div>
+      <p>Tamil: 80 <progress value="80" max="100"></progress></p>
+      <p>English: 45 <progress value="45" max="100"></progress></p>
+      <p>Maths: 100 <progress value="100" max="100"></progress></p>
+      <p>
+        Progress Bar:
+        <progress
+          style="height: 100px; width: 400px"
+          id="progressBar"
+          value="0"
+          max="100"></progress>
+      </p>
+    </div>
+    <script>
+      const bar = document.getElementById("progressBar");
+      let progValue = 0,
+        increment = 20,
+        interval = 2000;
+
+      const intervalFun = setInterval(() => {
+        progValue += increment;
+        bar.value = progValue;
+        if (progValue >= 100) {
+          clearInterval(intervalFun);
+        }
+      }, interval);
+    </script>
+  </body>
+</html>
