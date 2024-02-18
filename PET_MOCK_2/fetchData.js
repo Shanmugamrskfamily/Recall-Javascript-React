@@ -26,6 +26,16 @@ const userNames=async()=>{
             console.log(`Nodata Found: ${data}`);
             return;
         }
+
+        const userDataContainer = document.getElementById('userData');
+
+        data.forEach(user=>{
+            const row=document.createElement(`tr`);
+            row.innerHTML=`<td>${user.id}</td><td>${user.name}</td><td>${user.email}</td>`;
+            userDataContainer.appendChild(row);
+        });
+
+
     } catch (error) {
         console.error(error);
     }
