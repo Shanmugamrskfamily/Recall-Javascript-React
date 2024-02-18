@@ -18,10 +18,15 @@ function Count() {
     return (
         <div>
             Count: {count}<br />
-            <button style={{ margin: '10px' }} onClick={incrementCount}>
+            <button style={{ margin: '10px' }} onClick={()=>setCount(count+1)}>
                 Increment
             </button>
-            <button onClick={decrementCount}>Decrement</button>
+            <button onClick={()=>{
+                if(count<=0){
+                    alert("The value can't be below '0'!");
+                    return;
+                }
+                setCount(count-1)}}>Decrement</button>
         </div>
     );
 }

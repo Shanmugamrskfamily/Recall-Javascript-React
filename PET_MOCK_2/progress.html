@@ -29,6 +29,7 @@
       const intervalFun = setInterval(() => {
         progValue += increment;
         bar.value = progValue;
+        console.log(bar);
         if (progValue >= 100) {
           clearInterval(intervalFun);
         }
