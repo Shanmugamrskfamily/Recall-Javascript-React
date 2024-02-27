@@ -22,8 +22,6 @@ function playGame(wordToGuess, guessedLetters, remainingAttempts) {
     });
 
     // Display word with guessed letters and remaining attempts
-    console.log("Word: " + guessedLetters.join(' '));
-    console.log("Remaining attempts: " + remainingAttempts + "\n");
 
     // Prompt user for input
     rl.question('Enter a letter: ', (input) => {
@@ -42,7 +40,9 @@ function playGame(wordToGuess, guessedLetters, remainingAttempts) {
         // Check if the guessed letter matches any letter in the word
         for (let i = 0; i < wordToGuess.length; i++) {
             if (wordToGuess[i] === guessedLetter) {
+                
                 guessedLetters[i] = guessedLetter;
+                
                 found = true;
             }
         }
@@ -67,6 +67,9 @@ function playGame(wordToGuess, guessedLetters, remainingAttempts) {
             console.log("Game over!");
             process.exit(0);
         }
+        
+        console.log("Word: " + guessedLetters.join(' '));
+        console.log("Remaining attempts: " + remainingAttempts + "\n");
 
         // Continue playing
         playGame(wordToGuess, guessedLetters, remainingAttempts);
